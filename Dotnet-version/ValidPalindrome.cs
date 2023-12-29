@@ -12,8 +12,12 @@ namespace Technical_Test_Practice
 
             while (l<r)
             {
-                while (l<r && !alphaNum(words[l])) l++;
-                while (r>l && !alphaNum(words[r])) r--;
+                while (l<r && !alphaNum(words[l])) {
+                    l++;
+                }
+                while (r>l && !alphaNum(words[r])){
+                  r--;  
+                } 
                 if (words[l].ToString().ToLower() != words[r].ToString().ToLower()) return false;
                 l++;
                 r--;
