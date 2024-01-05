@@ -16,6 +16,7 @@ namespace Technical_Test_Practice
             int[] charCountP= new int[26];
             int[] charCountWindow= new int[26];
 
+        
             //Count the frequency of characters in p
             foreach(char c in p){
                 charCountP[c-'a']++;
