@@ -9,59 +9,56 @@ namespace Technical_Test_Practice
     public class MinWindowSubstring
     {
         public static string GetMinWindows(string s, string t){
-            if (s.Length<t.Length) return "";
+            if (s==t) return s;
+            if (t.Length>s.Length) return "";
+            var tCount = new Dictionary<char, int>();
+            var windowCount =new Dictionary<char, int>();
 
-            var tCount= new Dictionary<char, int>();
-            var WindCount= new Dictionary<char, int>();
-            int minLength=int.MaxValue;
-            int [] SubsIndex={0,0};
-            List<char> subStrings= new (); 
-            
-            //initt WindCount
-            foreach (char c in t.ToCharArray()){
-                tCount.Add(c,1);
-                WindCount.Add(c,0);
+            //init table values
+            foreach (var c in t.ToCharArray()) {
+             tCount.Add(c,1);
+             windowCount.Add(c,0);   
             }
 
-            int left=0;
-            int rigth=0;
-            //get initial minWindow
-            while (!isWindowSame(tCount, WindCount)){
-                var c=s[rigth];
-                if (WindCount.ContainsKey(c)){
-                    WindCount[c]++;
-                }
-                rigth++;
-            }
+            var result= new int[2]{0,0};
+            var left=0;
+            var right=0;
+            var minLength=int.MaxValue;
+            var indexs= new int[2]{0,0};
 
-            SubsIndex[0]=left;
-            SubsIndex[1]=rigth;
-            minLength=rigth-left;
-            while(rigth<s.Length){
-                var c=s[rigth];
-                if (WindCount.ContainsKey(c)){
-                    WindCount[c]++;
+            while (right<s.Length){
+
+                var ch= s[right];
+                if (tCount.ContainsKey(ch)){
+                    windowCount[ch]++;
                 }
-                while (isWindowSame(tCount, WindCount)){
-                    if (minLength> (rigth-left)){
-                        SubsIndex[0]=left;
-                        SubsIndex[1]=rigth;
+
+                while (isWindowHaveWhatWeNeed(tCount, windowCount)){
+                    var curLength= right-left;
+                    if (minLength>curLength){
+                        result[0]=left;
+                        result[1]=right;
+                        minLength=curLength;
                     }
-                    var ch=s[left];
-                    if (WindCount.ContainsKey(ch))WindCount[ch]--;
+
+                    var rightChar= s[left];
+                    if (windowCount.ContainsKey(rightChar)){
+                        windowCount[rightChar]--;
+                    }
+
                     left++;
                 }
 
-                rigth++;
+                right++;
             }
             left--;
-            rigth--;
-            return s.Substring(left, rigth-left+1);
+            right--;
+            return s.Substring(left, right-left+1);
         
 
         }
 
-        private static bool isWindowSame(Dictionary<char, int> tCount, Dictionary<char, int> wCount){
+        private static bool isWindowHaveWhatWeNeed(Dictionary<char, int> tCount, Dictionary<char, int> wCount){
             foreach (var k in tCount.Keys){
                 if (tCount[k]>wCount[k]) return false;
             }
