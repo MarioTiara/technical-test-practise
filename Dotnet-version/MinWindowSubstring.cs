@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Net.Sockets;
 using System.Threading.Tasks;
@@ -9,51 +10,50 @@ namespace Technical_Test_Practice
     public class MinWindowSubstring
     {
         public static string GetMinWindows(string s, string t){
-            if (s==t) return s;
-            if (t.Length>s.Length) return "";
-            var tCount = new Dictionary<char, int>();
-            var windowCount =new Dictionary<char, int>();
+            if (t=="") return "";
+            if (s.Length<t.Length) return "";
 
-            //init table values
+            var countT = new Dictionary<char, int>();
+            var window = new Dictionary<char, int>();
+            
             foreach (var c in t.ToCharArray()) {
-             tCount.Add(c,1);
-             windowCount.Add(c,0);   
+                if (countT.ContainsKey(c)) countT[c]+=1;
+                else countT.Add(c,1);
             }
 
-            var result= new int[2]{0,0};
-            var left=0;
-            var right=0;
-            var minLength=int.MaxValue;
-            var indexs= new int[2]{0,0};
+            int have=0;
+            int need = t.Length;
 
-            while (right<s.Length){
+            int [] result= new int[2]{-1,-1};
+            int resLen = int.MaxValue;
 
-                var ch= s[right];
-                if (tCount.ContainsKey(ch)){
-                    windowCount[ch]++;
-                }
+            int l=0;
+            //int r=0;
+            for (int r=0; r<s.Length; r++ ){
+                var c= s[r];
+                if (window.ContainsKey(c)) window[c]++;
+                else window.Add(c, 1);
 
-                while (isWindowHaveWhatWeNeed(tCount, windowCount)){
-                    var curLength= right-left;
-                    if (minLength>curLength){
-                        result[0]=left;
-                        result[1]=right;
-                        minLength=curLength;
+                if (countT.ContainsKey(c) && window[c]==countT[c]) have+=1;
+                while (have==need){
+                    var leftChar= s[l];
+                    //udate result
+                    if ((r-l+1)<resLen){
+                        result[0]=l;
+                        result[1]=r;
+                        resLen=(r-l+1);
                     }
-
-                    var rightChar= s[left];
-                    if (windowCount.ContainsKey(rightChar)){
-                        windowCount[rightChar]--;
+                    window[leftChar]-=1;
+                    if (countT.ContainsKey(leftChar) && window[leftChar]<countT[leftChar]){
+                        have-=1;
                     }
-
-                    left++;
+                    l+=1;
                 }
-
-                right++;
             }
-            left--;
-            right--;
-            return s.Substring(left, right-left+1);
+                
+            
+
+            return s.Substring(result[0], (result[1]-result[0]+1));
         
 
         }
