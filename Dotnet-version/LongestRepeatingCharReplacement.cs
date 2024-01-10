@@ -10,8 +10,7 @@ namespace Technical_Test_Practice
         public static int CharacterReplacement(string s, int k)
         {
 
-            var tCount = new Dictionary<char, int>();
-            int maxLen = int.MinValue;
+             int maxLen = int.MinValue;
 
             for (int l = 0; l < s.Length; l++)
             {
@@ -27,9 +26,19 @@ namespace Technical_Test_Practice
                     {
                         change++;
                     }
-                    if (change<=k) currentLen++;
+                    if (change <= k) currentLen++;
                     r++;
+                }
 
+                r=l-1;
+                while (change <= k && r>=0 ){
+                    var leftChar = s[r];
+                    if (currentChar != leftChar)
+                    {
+                        change++;
+                    }
+                    if (change <= k) currentLen++;
+                    r--;
                 }
 
                 maxLen = Math.Max(maxLen, currentLen);
