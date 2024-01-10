@@ -9,7 +9,7 @@ internal class Program
     {    
         var input= new List<int>{1,1,2,2,3};
 
-        Console.WriteLine(LongestRepeatingCharReplacement.CharacterReplacement("ABAB",2));
+        Console.WriteLine(LongestRepeatingCharReplacement.CharacterReplacement("AABABBA",1));
            
     }
 

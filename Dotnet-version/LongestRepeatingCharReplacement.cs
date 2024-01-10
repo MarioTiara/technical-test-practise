@@ -16,37 +16,23 @@ namespace Technical_Test_Practice
             for (int l = 0; l < s.Length; l++)
             {
                 var currentChar = s[l];
-                if (!tCount.ContainsKey(currentChar))
+                int change = 0;
+                int currentLen = 1;
+                int r = l + 1;
+
+                while (change <= k && r < s.Length)
                 {
-                    int change = 0;
-                    tCount[currentChar] = 1 + tCount.GetValueOrDefault(currentChar, 0);
-                    int r = l + 1;
-                    while (change <= k && r < s.Length)
+                    var leftChar = s[r];
+                    if (currentChar != leftChar)
                     {
-                        var leftChar = s[r];
-                        if (currentChar == leftChar)
-                        {
-                            tCount[currentChar] = 1 + tCount.GetValueOrDefault(currentChar, 0);
-                        }
-                        else
-                        {
-                            change++;
-                        }
-
-                        if (change == k && currentChar != leftChar)
-                        {
-                            tCount[currentChar] += change;
-                        }
-
-                        r++;
-
+                        change++;
                     }
+                    if (change<=k) currentLen++;
+                    r++;
 
-                    maxLen = Math.Max(maxLen, tCount[currentChar]);
                 }
 
-
-
+                maxLen = Math.Max(maxLen, currentLen);
             }
 
             return maxLen;
