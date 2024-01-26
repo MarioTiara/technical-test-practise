@@ -53,7 +53,7 @@ namespace Technical_Test_Practice
             int a_pointer=0;
             int b_pointer=0;
             int max=0;
-
+            
             HashSet<char> has_set= new ();
             while (b_pointer<s.Length){
                 if (!has_set.Contains (s[b_pointer])){

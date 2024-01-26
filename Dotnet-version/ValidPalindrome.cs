@@ -9,7 +9,7 @@ namespace Technical_Test_Practice
         {
             var l=0;
             var r=words.Count()-1;
-
+            
             while (l<r)
             {
                 while (l<r && !alphaNum(words[l])) {
