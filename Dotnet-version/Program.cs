@@ -7,9 +7,13 @@ internal class Program
 {
     private static void Main(string[] args)
     {    
-        var input=new int[]{2,0,2,1,1,0};
-        SortColor.SortColors(input);
-        Console.WriteLine(JsonSerializer.Serialize(input));
+        // var nums1= new int[]{1,2,3,0,0,0};
+        // var nums2= new int[]{2,5,6};
+        var nums1= new int[]{4,5,6,0,0,0};
+        var nums2= new int[]{1,2,3};
+
+        MergeSortedArray.Merge(nums1, 3, nums2, 3);
+        Console.WriteLine(JsonSerializer.Serialize(nums1));
 
     }
 }

@@ -8,6 +8,7 @@ namespace Technical_Test_Practice
     public class SortColor
     {
         public static void SortColors(int[] nums){
+            
             int l=0, m=0, h=nums.Length-1;
             while (m<=h){
                 if (nums[m]==0){
