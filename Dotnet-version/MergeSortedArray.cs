@@ -9,30 +9,32 @@ namespace Technical_Test_Practice
     {
         public static void Merge(int[] nums1, int m, int[] nums2, int n)
         {
-            if (n == 0) return;
 
-            int pointer1 = 0, pointer2 = 0;
-            while (pointer1 < m && pointer2 < n)
+            int i = m - 1;
+            int j = n - 1;
+            int k = m + n - 1;
+
+            while (i >= 0 && j >= 0)
             {
-                if (nums1[pointer1] > nums2[pointer2] && nums1[pointer1] != 0)
+                if (nums1[i]> nums2[j]){
+                    nums1[k]= nums1[i];
+                    i--;
+                }
+                else 
                 {
-                    var temp = nums2[pointer2];
-                    nums2[pointer2] = nums1[pointer1];
-                    nums1[pointer1] = temp;
+                    nums1[k]= nums2[j];
+                    j--;
+                }
 
-                    pointer1 += 1;
-                    pointer2 += 1;
-                }
-                else {
-                    pointer1++;
-                }
+                k--;
             }
 
-            for (int j = 0; j < n; j++)
-            {
-                nums1[m] = nums2[j];
-                m++;
+            while (j>=0){
+                nums1[k]=nums2[j];
+                j--;
+                k--;
             }
+
 
 
 
