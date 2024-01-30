@@ -9,26 +9,24 @@ namespace Technical_Test_Practice
     {
         public static int[] DailyTemperatures(int[] temperatures)
         {
+            
             int length = temperatures.Length;
             int[] answer = new int[length];
-            int l = 0;
+            Stack<int> stack= new Stack<int>();
 
-            while (l < length)
+            for (int i=0; i<length; i++)
             {
-                int r = l + 1;
-                var diff = 0;
-                while (diff <= 0 && r < length)
-                {
-                    diff = temperatures[r] - temperatures[l];
-                    r++;
+                while (stack.Count> 0 && temperatures[i]> temperatures[stack.Peek()]){
+                    int prevIndex = stack.Pop();
+                    answer[prevIndex]= i-prevIndex;
+
                 }
 
-                if (diff > 0) answer[l] = r - l - 1;
-                else answer[l] = 0;
-                l++;
+                stack.Push(i);
             }
 
             return answer;
+
         }
     }
 }
