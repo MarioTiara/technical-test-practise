@@ -11,7 +11,7 @@ internal class Program
         // var nums1= new int[]{1,2,3,0,0,0};
         // var nums2= new int[]{2,5,6};
         var input=new int[]{4, -31, 0, 99, 83, 1};
-        MergeSort.MergeSortAlgorithm(input, 0, input.Length-1);
+        QuickSort.SortQuick(input, 0, input.Length-1);
        
         Console.WriteLine(JsonSerializer.Serialize(input));
 
