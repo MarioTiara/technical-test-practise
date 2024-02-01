@@ -10,10 +10,13 @@ internal class Program
     {    
         // var nums1= new int[]{1,2,3,0,0,0};
         // var nums2= new int[]{2,5,6};
-        var input=new int[]{4, -31, 0, 99, 83, 1};
-        QuickSort.SortQuick(input, 0, input.Length-1);
+        var input= new int[][]{
+            new int[]{1,4},
+            new int[]{2,3},
+            
+        };
        
-        Console.WriteLine(JsonSerializer.Serialize(input));
+        Console.WriteLine(JsonSerializer.Serialize(LC56_MergeIntervals.Merge(input)));
 
         //var a = [4, -31, 0, 99, 83, 1];
         // current= 4

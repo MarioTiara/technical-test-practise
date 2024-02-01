@@ -12,29 +12,65 @@ namespace Technical_Test_Practice
             if (intervals == null || intervals.Length == 0)
                 return Array.Empty<int[]>();
 
-            List<int[]> result = new();
-            result.Add(intervals[0]);
-            int length = intervals.Length;
+            var length = intervals.Length - 1;
+            // Sort intervals based on their start times
+            QuickSort(intervals, 0, length);
 
-            if (intervals.Length < 1){
-                result.ToArray();
-            }
+            //init merged array
+            List<int[]> mergedArr = new();
+            mergedArr.Add(intervals[0]);
 
-            for (int i = 1; i < length; i++)
+            for (int i = 1; i <=length; i++)
             {
-                var currentIntervals = intervals[i];
-                var prevIntervals = result.Last();
-                if (currentIntervals[0] <= prevIntervals[1])
+                var lastElement = mergedArr.Last();
+                if (intervals[i][0] <= lastElement[1])
                 {
-                    result[i-1][1]=currentIntervals[1];
+                    lastElement[1] = Math.Max(lastElement[1], intervals[i][1]);
                 }
+
                 else
                 {
-                    result.Add(currentIntervals);
+                    mergedArr.Add(intervals[i]);
                 }
             }
-            return result.ToArray();
 
+            return mergedArr.ToArray();
+
+        }
+
+        private static void QuickSort(int[][] intervals, int start, int end)
+        {
+            if (start < end)
+            {
+                var pIndex = Partition(intervals, start, end);
+                QuickSort(intervals, start, pIndex - 1);
+                QuickSort(intervals, pIndex + 1, end);
+            }
+
+        }
+
+        private static int Partition(int[][] intervals, int start, int end)
+        {
+            int pivot = end;
+            int pIndex = start;
+            for (int i = start; i < end; i++)
+            {
+                if (intervals[i][0] <= intervals[pivot][0])
+                {
+                    swap(intervals, i, pIndex);
+                    pIndex += 1;
+                }
+            }
+
+            swap(intervals, pivot, pIndex);
+            return pIndex;
+        }
+
+        private static void swap(int[][] intervals, int a, int b)
+        {
+            var temp = intervals[a];
+            intervals[a] = intervals[b];
+            intervals[b] = temp;
         }
     }
 }
