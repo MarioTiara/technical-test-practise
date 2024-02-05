@@ -35,6 +35,8 @@ namespace Technical_Test_Practice.Sorting_Algorithms
             Array.Copy(array, left, leftArray, 0, n1);
             Array.Copy(array, mid + 1, rightArray, 0, n2);
 
+            
+
             // Merge the temporary arrays back into array[left..right]
             int i = 0, j = 0, k = left;
             while (i < n1 && j < n2)
