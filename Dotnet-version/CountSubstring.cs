@@ -10,6 +10,7 @@ namespace Technical_Test_Practice
     {
         public static int Count(string s)
         {
+            var substring= new List<string>();
             int count = 0;
 
             for (int i = 0; i < s.Length; i++)
@@ -18,6 +19,7 @@ namespace Technical_Test_Practice
                 while (l >= 0 && r < s.Length && s[l] == s[r])
                 {
                     count++;
+                    substring.Add (s.Substring(l, r-l+1));
                     l--;
                     r++;
                 }
@@ -27,6 +29,7 @@ namespace Technical_Test_Practice
                 while (l >= 0 && r < s.Length && s[l] == s[r])
                 {
                     count++;
+                    substring.Add (s.Substring(l, r-l+1));
                     l-=1;
                     r+=1;
                 }

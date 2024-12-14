@@ -37,7 +37,6 @@ namespace Technical_Test_Practice.Arry_Problems
                 {
                     nonOverlapArr.Add(currentIntervals);
                 }
-
                 i++;
 
             }
@@ -49,7 +48,4 @@ namespace Technical_Test_Practice.Arry_Problems
             return list1[1]>list2[0];
         }
     }
-
-
-
 }

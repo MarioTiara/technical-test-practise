@@ -1,85 +1,65 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text.Json;
 
-namespace Technical_Test_Practice.Sorting_Algorithms
+namespace SortingAlgorithms;
+
+public class MergeSort
 {
-    public class MergeSort
+    public static void Sort(int[] arr, int left, int right)
     {
-        public static void MergeSortAlgorithm(int[] array, int left, int right)
+        if (left < right)
         {
-            if (left < right)
-            {
-                int mid = (left + right) / 2;
-
-                // Recursively sort the first and second halves
-                MergeSortAlgorithm(array, left, mid);
-                MergeSortAlgorithm(array, mid + 1, right);
-
-                // Merge the sorted halves
-                Merge(array, left, mid, right);
-            }
-        }
-
-        static void Merge(int[] array, int left, int mid, int right)
-        {
-            int n1 = mid - left + 1;
-            int n2 = right - mid;
-
-            // Create temporary arrays
-            int[] leftArray = new int[n1];
-            int[] rightArray = new int[n2];
-
-            // Copy data to temporary arrays leftArray[] and rightArray[]
-            Array.Copy(array, left, leftArray, 0, n1);
-            Array.Copy(array, mid + 1, rightArray, 0, n2);
-
-            
-
-            // Merge the temporary arrays back into array[left..right]
-            int i = 0, j = 0, k = left;
-            while (i < n1 && j < n2)
-            {
-                if (leftArray[i] <= rightArray[j])
-                {
-                    array[k] = leftArray[i];
-                    i++;
-                }
-                else
-                {
-                    array[k] = rightArray[j];
-                    j++;
-                }
-                k++;
-            }
-
-            // Copy the remaining elements of leftArray[], if there are any
-            while (i < n1)
-            {
-                array[k] = leftArray[i];
-                i++;
-                k++;
-            }
-
-            // Copy the remaining elements of rightArray[], if there are any
-            while (j < n2)
-            {
-                array[k] = rightArray[j];
-                j++;
-                k++;
-            }
-        }
-
-        static void PrintArray(int[] array)
-        {
-            foreach (var element in array)
-            {
-                Console.Write(element + " ");
-            }
-            Console.WriteLine();
+            int mid = (left + right) / 2;
+            Sort(arr, left, mid);
+            Sort(arr, mid + 1, right);
+            Merge(arr, left, mid, right);
         }
     }
 
+    private static void Merge(int[] arr, int left, int mid, int right)
+    {
+        //make left and right array
+        var leftArr = new int[mid - left + 1];
+        var rightArr = new int[right - mid];
+        for (int i = 0; i < leftArr.Length; i++)
+        {
+            leftArr[i] = arr[left + i];
+        }
+        for (int i = 0; i < rightArr.Length; i++)
+        {
+            rightArr[i] = arr[mid + i + 1];
+        }
 
+        //merge left and right array
+        int lPointer = 0, rPoint = 0;
+        int k = left;
+        while (lPointer < leftArr.Length && rPoint < rightArr.Length)
+        {
+            if (leftArr[lPointer] < rightArr[rPoint])
+            {
+                arr[k] = leftArr[lPointer];
+                lPointer++;
+            }
+            else
+            {
+                arr[k] = rightArr[rPoint];
+                rPoint++;
+            }
+            k++;
+        }
+
+        //copy remaining element
+        while (lPointer < leftArr.Length)
+        {
+            arr[k] = leftArr[lPointer];
+            lPointer++;
+            k++;
+        }
+
+        while (rPoint < rightArr.Length)
+        {
+            arr[k] = rightArr[rPoint];
+            rPoint++;
+            k++;
+        }
+    }
 }
