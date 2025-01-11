@@ -1,0 +1,184 @@
+.f32 .flag {
+    vertical-align: middle;
+    margin: -8px 0;
+}
+
+progress {
+    width: 100%;
+}
+
+div.dataTables_wrapper {
+    margin-top: 25px;
+}
+
+/* .head-title{
+    background-color: aquamarine;
+} */
+
+.sub-content-container {
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.breadcrumb {
+    background-color: #F0F0F0;
+}
+
+#tablemanager_wrapper .dt-buttons .dt-button {
+    background-color: #c0df34;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.page-item.active .page-link {
+    background-color: #c0df34;
+    border-color: #c0df34;
+}
+
+#btntable_Edit,
+#btntable_delete {
+    background-color: inherit;
+}
+
+#btntable_Edit i:hover,
+#btntable_delete i:hover {
+    color: #c0df34;
+    ;
+}
+
+.sub-content-container {
+    overflow: scroll;
+    padding: 15px;
+}
+
+.sub-content-container .container 
+{
+    max-width: 100%;
+}
+
+
+.btn {
+    padding: 0.1rem 0.2rem !important;
+}
+
+#btn-container{
+    margin-left: 6px;
+}
+
+
+
+
+.modal-insert-nie-form .modal-content{
+    width: 150% !important;
+    
+}
+
+.modal-body {
+    overflow: scroll;
+}
+
+
+.dataTables_wrapper .dataTables_scroll{
+    overflow-x: scroll;
+}
+
+.filters {
+    background-color: aquamarine;
+    padding: 15px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    text-align: right;
+    background-color:  #fff;
+}
+
+.filters .buttons 
+{
+    display: inline-block;
+}
+
+.swal-modal .swal-text
+{
+     overflow-wrap:unset;
+    overflow-y: scroll;
+}
+
+/* button action */
+
+.filters .btn-action
+{
+    font-weight: bold;
+    background-color:#2ab2af ;
+    padding: 10px !important;
+    border: #2ab2af;
+
+}
+
+.filters .btn-action .logo
+{
+    margin-right: 10px;
+    
+}
+
+.filters .btn-action .logo, .filters .btn-action .link-name
+{
+    font-weight: bold;
+}
+
+
+.footer-buttons
+{
+    margin-top: 20px;
+}
+
+#btn-check-data, #btn-approve-product-barcode{
+    
+    padding: 10px !important;
+}
+
+#btn-check-data .logo, #btn-approve-product-barcode .logo
+{
+    margin-right: 10px;
+}
+
+.modal-footer .logo, .modal-footer .link-name {
+    font-weight: bolder;
+}
+#btn-check-data
+{
+    background-color: #C3C981 ;
+    border: #C3C981;
+}
+
+
+.dataTables_wrapper .dataTables_filter input{
+    border-radius: 10px;
+    border-color: #C3C981;
+    border-width: 3px;
+}
+
+
+#multiple-select2 
+{
+    width: 100% !important;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+#hidden-input {
+    margin-top: 7px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#hidden-input.show {
+    display: block;
+    opacity: 1;
+}
+

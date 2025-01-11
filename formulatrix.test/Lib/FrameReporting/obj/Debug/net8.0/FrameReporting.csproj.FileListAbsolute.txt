@@ -1,0 +1,12 @@
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/bin/Debug/net8.0/FrameReporting.deps.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/bin/Debug/net8.0/FrameReporting.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/bin/Debug/net8.0/FrameReporting.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.AssemblyInfoInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.AssemblyInfo.cs
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.csproj.CoreCompileInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.sourcelink.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/refint/FrameReporting.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/FrameReporting.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/FrameReporting/obj/Debug/net8.0/ref/FrameReporting.dll

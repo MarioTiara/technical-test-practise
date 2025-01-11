@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/agid.production.planner.props" />
+</Project>

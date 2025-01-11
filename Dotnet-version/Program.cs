@@ -1,16 +1,19 @@
 ﻿using System.Text.Json;
+using HackerRank;
+using Matrix;
+using Technical_Test_Practice;
 
 
 public class DoublyLinkedListNode
 {
-    public int data {get;set;}
-   public DoublyLinkedListNode next {get;set;}
-   public DoublyLinkedListNode prev {get;set;}
+    public int data { get; set; }
+    public DoublyLinkedListNode next { get; set; }
+    public DoublyLinkedListNode prev { get; set; }
 
-   public DoublyLinkedListNode(int data)
-   {
-     this.data = data;
-   }
+    public DoublyLinkedListNode(int data)
+    {
+        this.data = data;
+    }
 }
 
 internal class Program
@@ -18,25 +21,23 @@ internal class Program
 
     private static void Main(string[] args)
     {
-        
-        int n=5;
-
-        for (int i=n; i>0; i--)
+        // char[][] grid = new char[][]
+        // {
+        //     new char[] { '1', '1', '1', '1', '0' },
+        //     new char[] { '1', '1', '0', '1', '0' },
+        //     new char[] { '1', '1', '0', '0', '0' },
+        //     new char[] { '0', '0', '0', '0', '0' }
+        // };
+        char[][] grid = new char[][]
         {
-           for (int j=1; j<=n; j++)
-           {
-              if (j>=i)
-              {
-                Console.Write("*");
-              }
-              else
-              {
-                Console.Write(" ");
-              }
-           }
-           Console.WriteLine();
-        }
+            new char[] { '1', '1', '0', '0', '0' },
+            new char[] { '1', '1', '0', '0', '0' },
+            new char[] { '0', '0', '1', '0', '0' },
+            new char[] { '0', '0', '0', '1', '1' }
+        };
 
+        var result = NumberOfIsland.NumsIsLands(grid);
+        Console.WriteLine(result);
 
     }
 

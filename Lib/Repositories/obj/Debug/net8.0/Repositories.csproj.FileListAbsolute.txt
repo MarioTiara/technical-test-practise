@@ -1,0 +1,12 @@
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/bin/Debug/net8.0/Repositories.deps.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/bin/Debug/net8.0/Repositories.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/bin/Debug/net8.0/Repositories.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfoInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.AssemblyInfo.cs
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.csproj.CoreCompileInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.sourcelink.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/refint/Repositories.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/Repositories.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/formulatrix.test/Lib/Repositories/obj/Debug/net8.0/ref/Repositories.dll

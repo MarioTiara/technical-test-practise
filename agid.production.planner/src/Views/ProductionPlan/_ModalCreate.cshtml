@@ -1,0 +1,88 @@
+<section class="sec-modal-nie-form">
+    <div class="modal fade modal-create modal-insert-nie-form" id="modal-nie-form" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">ADD PRODUCTION PLAN</h5>
+                    <button id="modalcloseup" type="button" class="close btn-close" data-dismiss="modal"
+                        aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate>
+                        <div class="form-group">
+                            <label class="col-form-label">TAHUN</label>
+                            <input type="text" class="form-control" id="year" required>
+                            <div class="invalid-feedback">
+                                Please fill user year.
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">MINGGU KE</label>
+                            <select class="form-control" id="week-option" required>
+                                <option selected disabled value="">--Pilih minggu ke--</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select a valid week.
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">SENIN</label>
+                                    <input type="text" class="form-control" id="senin">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">SELASA</label>
+                                    <input type="text" class="form-control" id="selasa">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">RABU</label>
+                                    <input type="text" class="form-control" id="rabu">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">KAMIS</label>
+                                    <input type="text" class="form-control" id="kamis">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">JUMAT</label>
+                                    <input type="text" class="form-control" id="jumat">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">SABTU</label>
+                                    <input type="text" class="form-control" id="sabtu">
+                                </div>
+                            </div>
+                            <div class="col-sm">
+                                <div class="form-group">
+                                    <label class="col-form-label">MINGGU</label>
+                                    <input type="text" class="form-control" id="minggu">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="btn-close" type="button" class="btn btn-secondary"
+                                data-dismiss="modal-create">Close</button>
+                            <button id="btn-submit-new-plan" type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

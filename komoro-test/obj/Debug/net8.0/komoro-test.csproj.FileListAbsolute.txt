@@ -1,0 +1,15 @@
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/bin/Debug/net8.0/komoro-test
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/bin/Debug/net8.0/komoro-test.deps.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/bin/Debug/net8.0/komoro-test.runtimeconfig.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/bin/Debug/net8.0/komoro-test.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/bin/Debug/net8.0/komoro-test.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.AssemblyInfoInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.AssemblyInfo.cs
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.csproj.CoreCompileInputs.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.sourcelink.json
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/refint/komoro-test.dll
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.pdb
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/komoro-test.genruntimeconfig.cache
+/Users/mpratama/Documents/Coding/Personal/Technical-Test-Practice/komoro-test/obj/Debug/net8.0/ref/komoro-test.dll
