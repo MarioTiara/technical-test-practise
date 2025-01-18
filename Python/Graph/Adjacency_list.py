@@ -40,6 +40,8 @@ class Undirected_Graph:
             return False
         return dfs_hash_path(src, dst)
 
+    
+    
     def hash_path_with_bfs(self, src, dst):
         visited=[False] * len (self.adjlist)
         que= deque()
@@ -72,7 +74,27 @@ class Undirected_Graph:
                     que.append(n)
         return result
     
+    def connected_node(self):
+        visited=[False] * len (self.adjlist)
+        def bfs(start):
+            queu= deque()
+            queu.append(start)
+            visited[start]=True
+            while len (queu)>0:
+                v=queu.popleft()
+                for n in self.adjlist[v]:
+                    if not visited[n]:
+                        visited[n]=True
+                        queu.append(n)
         
+        count=0
+        for i in range(len(self.adjlist)):
+            if not visited[i]:
+                bfs(i)
+                count+=1
+        
+        return count
+                
         
 
 class Directed_Grpah:
@@ -134,37 +156,37 @@ class Directed_Grpah:
         
         return False
 
-gr= Directed_Grpah(6)
+# gr= Directed_Grpah(6)
 
-gr.add__neighbor(0,1)
-gr.add__neighbor(0,3)
-gr.add__neighbor(1,2)
-gr.add__neighbor(3,2)
-gr.add__neighbor(4,3)
-gr.add__neighbor(3,5)
+# gr.add__neighbor(0,1)
+# gr.add__neighbor(0,3)
+# gr.add__neighbor(1,2)
+# gr.add__neighbor(3,2)
+# gr.add__neighbor(4,3)
+# gr.add__neighbor(3,5)
 
-gr.display()
-bfs=gr.BFS(0)
-print(f"bfs: {bfs}")  
+# gr.display()
+# bfs=gr.BFS(0)
+# print(f"bfs: {bfs}")  
 
-dfs=gr.DFS(3)
-print(f"dfs: {dfs}")  
+# dfs=gr.DFS(3)
+# print(f"dfs: {dfs}")  
 
-print(f" has path: {gr.has_path(3,2)}")
-print(f" bfs has path: {gr.bfs_has_path(5,0)}")
+# print(f" has path: {gr.has_path(3,2)}")
+# print(f" bfs has path: {gr.bfs_has_path(5,0)}")
 
 
-undr_graph= Undirected_Graph(8)
+undr_graph= Undirected_Graph(10)
 undr_graph.add_edge(0,1)
-undr_graph.add_edge(1,2)
-undr_graph.add_edge(0,3)
-undr_graph.add_edge(3,2)
 undr_graph.add_edge(3,4)
-undr_graph.add_edge(3,5)
-undr_graph.add_edge(6,7)
-
+undr_graph.add_edge(5,4)
+undr_graph.add_edge(6,4)
+undr_graph.add_edge(7,4)
+undr_graph.add_edge(8,9)
 undr_graph.display()
 
-print(f" has path: {undr_graph.has_path(0,7)}")
-print(f"bfs has path: {undr_graph.has_path(0,5)}")
+connected_node= undr_graph.connected_node()
+print(connected_node)
+# print(f" has path: {undr_graph.has_path(0,7)}")
+# print(f"bfs has path: {undr_graph.has_path(0,5)}")
   
